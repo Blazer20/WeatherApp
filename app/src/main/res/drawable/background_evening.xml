@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+
+    <item
+        android:drawable="@drawable/ic_background_gradient2"
+        android:gravity="fill_horizontal|fill_vertical"/>
+    <item
+        android:drawable="@drawable/ic_sun2"
+        android:gravity="center"
+        android:top="255dp"
+        android:left="16dp"
+        android:right="17dp"
+        android:bottom="214dp"/>
+    <item
+        android:drawable="@drawable/ic_cloud1_evening"
+        android:gravity="center"
+        android:left="58dp"
+        android:top="187dp"
+        android:right="202dp"
+        android:bottom="556dp"/>
+    <item
+        android:drawable="@drawable/ic_cloud2_evening"
+        android:gravity="center"
+        android:top="178dp"
+        android:bottom="593dp"
+        android:left="180dp"
+        android:right="107dp"/>
+
+    <item
+        android:drawable="@drawable/ic_cloud3_evening"
+        android:gravity="center"
+        android:top="230dp"
+        android:left="210dp"
+        android:bottom="519dp" />
+
+    <item
+        android:drawable="@drawable/ic_land2_evening"
+        android:gravity="center_vertical|fill_horizontal"
+        android:top="420dp"
+        android:left="139dp"
+        android:bottom="212dp"/>
+
+    <item
+        android:drawable="@drawable/ic_land1_evening"
+        android:gravity="center_vertical|fill_horizontal"
+        android:right="69dp"
+        android:top="423dp"
+        android:bottom="212dp"/>
+
+    <item
+        android:drawable="@drawable/ic_peaceofground_evening"
+        android:gravity="center"
+        android:left="55dp"
+        android:right="69dp"
+        android:top="494dp"
+        android:bottom="237dp"/>
+    <item
+        android:drawable="@drawable/ic_river1_evening"
+        android:gravity="center"
+        android:top="474dp"
+        android:left="55dp"
+        android:right="39dp"
+        android:bottom="212dp"/>
+
+    <item
+        android:drawable="@drawable/ic_leaves1_evening"
+        android:gravity="center"
+        android:top="237dp"
+        android:bottom="376dp"
+        android:right="268dp"
+        android:left="6dp"/>
+
+    <item
+        android:drawable="@drawable/ic_trunk1_evening"
+        android:gravity="center"
+        android:top="320dp"
+        android:bottom="334dp"
+        android:right="305dp"
+        android:left="35dp"/>
+
+    <item
+        android:drawable="@drawable/ic_trunk2_evening"
+        android:gravity="center"
+        android:top="410dp"
+        android:bottom="387dp"
+        android:left="292dp"
+        android:right="75dp"/>
+
+    <item
+        android:drawable="@drawable/ic_leaves2_evening"
+        android:gravity="center"
+        android:top="358dp"
+        android:right="66dp"
+        android:bottom="396dp"
+        android:left="284dp"/>
+
+    <item
+        android:drawable="@drawable/ic_trunk3_evening"
+        android:gravity="center"
+        android:top="409dp"
+        android:left="339dp"
+        android:right="26dp"
+        android:bottom="371dp"/>
+
+    <item
+        android:drawable="@drawable/ic_leaves3_evening"
+        android:gravity="center"
+        android:top="332dp"
+        android:right="10dp"
+        android:left="326dp"
+        android:bottom="390dp"/>
+
+</layer-list>

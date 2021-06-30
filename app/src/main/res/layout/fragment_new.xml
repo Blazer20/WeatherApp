@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/newFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/currentDateNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="35dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:gravity="left"
+                android:text="Today, 12 May 19"
+                android:textColor="#333333"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/currentLocationNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:gravity="left"
+                android:text="Current location"
+                android:textColor="#333333"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/currentDateNew" />
+
+            <TextView
+                android:id="@+id/currentDegreeNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="257dp"
+                android:layout_marginTop="132dp"
+                android:layout_marginRight="59dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="00"
+                android:textColor="#333333"
+                android:textSize="40sp"
+                android:typeface="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/currentCelsiusNew"
+                android:layout_width="17dp"
+                android:layout_height="21dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="24dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="℃"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/currentDegreeNew"
+                app:layout_constraintTop_toTopOf="@id/currentDegreeNew" />
+
+            <ImageView
+                android:id="@+id/currentWeatherIconNew"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginRight="9dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="@id/currentDegreeNew"
+                app:layout_constraintEnd_toStartOf="@id/currentDegreeNew"
+                app:layout_constraintTop_toTopOf="@id/currentDegreeNew" />
+
+            <TextView
+                android:id="@+id/currentDescriptionNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="205dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginRight="39dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="Sunny with periodic clouds"
+                android:textAlignment="center"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/currentDegreeNew" />
+
+            <TextView
+                android:id="@+id/currentDayNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="37dp"
+                android:layout_marginTop="28dp"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="DAY"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/currentLocationNew" />
+
+            <ImageView
+                android:id="@+id/upNew"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="26dp"
+                android:focusable="false"
+                app:layout_constraintBottom_toBottomOf="@id/currentDayNew"
+                app:layout_constraintStart_toEndOf="@id/currentDayNew"
+                app:layout_constraintTop_toBottomOf="@id/currentLocationNew" />
+
+            <TextView
+                android:id="@+id/currentDegreeDayNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginRight="59dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="00"
+                android:textColor="#333333"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@id/upNew"
+                app:layout_constraintTop_toBottomOf="@id/currentLocationNew" />
+
+            <TextView
+                android:id="@+id/degreeSymbolDNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="°"
+                android:textColor="#333333"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@id/currentDegreeDayNew"
+                app:layout_constraintTop_toTopOf="@id/currentDegreeDayNew" />
+
+            <TextView
+                android:id="@+id/currentNightNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="11dp"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="NIGHT"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@id/currentDayNew"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/currentDayNew" />
+
+            <ImageView
+                android:id="@+id/downNew"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="7dp"
+                android:focusable="false"
+                app:layout_constraintStart_toEndOf="@id/currentNightNew"
+                app:layout_constraintTop_toTopOf="@id/currentNightNew" />
+
+            <TextView
+                android:id="@+id/currentDegreeNightNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="00"
+                android:textColor="#333333"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@+id/downNew"
+                app:layout_constraintTop_toTopOf="@id/downNew" />
+
+            <TextView
+                android:id="@+id/degreeSymbolNNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="°"
+                android:textColor="#333333"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@id/currentDegreeNightNew"
+                app:layout_constraintTop_toTopOf="@id/currentDegreeNightNew" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lowerDrawNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_view_style2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/arcNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/ic_arc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/sunriseNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_sunrise"
+            app:layout_constraintEnd_toStartOf="@id/arcNew"
+            app:layout_constraintStart_toStartOf="@id/arcNew"
+            app:layout_constraintTop_toBottomOf="@id/arcNew" />
+
+        <TextView
+            android:id="@+id/sunriseTitleNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:fontFamily="@font/montserrat"
+            android:text="Sunrise"
+            android:textColor="#333333"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toEndOf="@id/sunriseNew"
+            app:layout_constraintStart_toStartOf="@id/sunriseNew"
+            app:layout_constraintTop_toBottomOf="@id/sunriseNew" />
+
+        <TextView
+            android:id="@+id/sunriseTimeNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:focusable="false"
+            android:fontFamily="@font/montserrat"
+            android:text="00:00"
+            android:textColor="#333333"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toTopOf="@id/longLineNew"
+            app:layout_constraintEnd_toEndOf="@id/sunriseTitleNew"
+            app:layout_constraintStart_toStartOf="@id/sunriseTitleNew"
+            app:layout_constraintTop_toBottomOf="@id/sunriseTitleNew" />
+
+        <ImageView
+            android:id="@+id/windNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_wind"
+            app:layout_constraintEnd_toEndOf="@id/arcNew"
+            app:layout_constraintStart_toStartOf="@id/arcNew"
+            app:layout_constraintTop_toBottomOf="@id/arcNew" />
+
+        <TextView
+            android:id="@+id/windTitleNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:fontFamily="@font/montserrat"
+            android:text="Wind"
+            android:textColor="#333333"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toEndOf="@id/windNew"
+            app:layout_constraintStart_toStartOf="@id/windNew"
+            app:layout_constraintTop_toBottomOf="@id/windNew" />
+
+        <TextView
+            android:id="@+id/windValueNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:focusable="false"
+            android:fontFamily="@font/montserrat"
+            android:text="00:00"
+            android:textColor="#333333"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toTopOf="@id/longLineNew"
+            app:layout_constraintEnd_toEndOf="@id/windTitleNew"
+            app:layout_constraintStart_toStartOf="@id/windTitleNew"
+            app:layout_constraintTop_toBottomOf="@id/windTitleNew" />
+
+        <ImageView
+            android:id="@+id/sunsetNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_sunset"
+            app:layout_constraintEnd_toEndOf="@id/arcNew"
+            app:layout_constraintStart_toEndOf="@+id/arcNew"
+            app:layout_constraintTop_toBottomOf="@id/arcNew" />
+
+        <TextView
+            android:id="@+id/sunsetTitleNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:focusable="false"
+            android:fontFamily="@font/montserrat"
+            android:text="Sunset"
+            android:textColor="#333333"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toEndOf="@id/sunsetNew"
+            app:layout_constraintStart_toStartOf="@id/sunsetNew"
+            app:layout_constraintTop_toBottomOf="@id/sunsetNew" />
+
+        <TextView
+            android:id="@+id/sunsetTimeNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:focusable="false"
+            android:fontFamily="@font/montserrat"
+            android:text="00:00"
+            android:textColor="#333333"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toTopOf="@id/longLineNew"
+            app:layout_constraintEnd_toEndOf="@id/sunsetTitleNew"
+            app:layout_constraintStart_toStartOf="@id/sunsetTitleNew"
+            app:layout_constraintTop_toBottomOf="@id/sunsetTitleNew" />
+
+        <ImageView
+            android:id="@+id/longLineNew"
+            android:layout_width="327dp"
+            android:layout_height="3dp"
+            android:layout_marginBottom="11dp"
+            android:src="@drawable/icon_style1"
+            app:layout_constraintBottom_toTopOf="@id/imageViewNew"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageViewNew"
+            android:layout_width="47dp"
+            android:layout_height="47dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/icon_style"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tomorrowNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:fontFamily="@font/montserrat"
+            android:text="Tomorrow"
+            android:textColor="#444444"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewNew"
+            app:layout_constraintEnd_toStartOf="@id/imageViewNew"
+            app:layout_constraintTop_toTopOf="@id/imageViewNew" />
+
+        <TextView
+            android:id="@+id/nextFewDaysNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:focusable="false"
+            android:fontFamily="@font/montserrat"
+            android:text="Next Few Days"
+            android:textColor="#444444"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewNew"
+            app:layout_constraintStart_toEndOf="@id/imageViewNew"
+            app:layout_constraintTop_toTopOf="@id/imageViewNew" />
+
+        <ScrollView
+            android:id="@+id/expandedViewNew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/collapse_background">
+
+                <TextView
+                    android:id="@+id/collapseTomorrowNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginTop="28dp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Tomorrow"
+                    android:textColor="#444444"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/collapseNextFewDaysNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginRight="49dp"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Next Few Days"
+                    android:textColor="#444444"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/collapseButtonBackNew"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="305dp"
+                    android:layout_marginTop="53dp"
+                    android:layout_marginRight="37dp"
+                    android:background="@drawable/button_style_down"
+                    android:shadowRadius="100"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/collapseCurrentDateNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="left"
+                    android:text="Today, 12 May 19"
+                    android:textColor="#333333"
+                    android:textSize="19sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/collapseButtonBackNew" />
+
+                <TextView
+                    android:id="@+id/collapseCurrentLocationNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="left"
+                    android:text="Current location"
+                    android:textColor="#333333"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="@id/collapseCurrentDateNew"
+                    app:layout_constraintStart_toStartOf="@id/collapseCurrentDateNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseCurrentDateNew" />
+
+                <TextView
+                    android:id="@+id/collapseCurrentDegreeNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="95dp"
+                    android:layout_marginTop="23dp"
+                    android:layout_marginRight="59dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="00"
+                    android:textColor="#333333"
+                    android:textSize="40sp"
+                    android:typeface="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/collapseCurrentLocationNew"
+                    app:layout_constraintStart_toStartOf="@+id/collapseCurrentLocationNew"
+                    app:layout_constraintTop_toBottomOf="@+id/collapseCurrentLocationNew" />
+
+                <TextView
+                    android:id="@+id/collapseCurrentCelsiusNew"
+                    android:layout_width="17dp"
+                    android:layout_height="21dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="24dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="℃"
+                    android:textColor="#333333"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/collapseCurrentDegreeNew"
+                    app:layout_constraintTop_toTopOf="@id/collapseCurrentDegreeNew" />
+
+                <ImageView
+                    android:id="@+id/collapseCurrentWeatherIconNew"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_marginRight="9dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    app:layout_constraintBottom_toBottomOf="@id/collapseCurrentDegreeNew"
+                    app:layout_constraintEnd_toStartOf="@id/collapseCurrentDegreeNew"
+                    app:layout_constraintTop_toTopOf="@id/collapseCurrentDegreeNew" />
+
+                <TextView
+                    android:id="@+id/collapseCurrentDescriptionNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="85dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="Sunny with periodic clouds"
+                    android:textColor="#333333"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@id/collapseCurrentLocationNew"
+                    app:layout_constraintStart_toStartOf="@id/collapseCurrentLocationNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseCurrentLocationNew" />
+
+                <TextView
+                    android:id="@+id/collapseCurrentDayNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="104dp"
+                    android:layout_marginTop="19dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="DAY"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/collapseCurrentDescriptionNew" />
+
+                <ImageView
+                    android:id="@+id/collapseUpNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:focusable="false"
+                    android:src="@drawable/ic_up"
+                    app:layout_constraintBottom_toBottomOf="@id/collapseCurrentDayNew"
+                    app:layout_constraintStart_toEndOf="@id/collapseCurrentDayNew"
+                    app:layout_constraintTop_toTopOf="@id/collapseCurrentDayNew" />
+
+                <TextView
+                    android:id="@+id/collapseCurrentDegreeDayNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="59dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="00"
+                    android:textColor="#333333"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@id/collapseUpNew"
+                    app:layout_constraintStart_toEndOf="@id/collapseUpNew"
+                    app:layout_constraintTop_toTopOf="@id/collapseUpNew" />
+
+                <TextView
+                    android:id="@+id/dayDotDegNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="°"
+                    android:textColor="#333333"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toEndOf="@id/collapseCurrentDegreeDayNew"
+                    app:layout_constraintTop_toTopOf="@id/collapseCurrentDegreeDayNew" />
+
+                <TextView
+                    android:id="@+id/collapseCurrentNightNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="19dp"
+                    android:layout_marginTop="19dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:text="NIGHT"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@id/collapseDownNew"
+                    app:layout_constraintStart_toEndOf="@id/dayDotDegNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseCurrentDescriptionNew" />
+
+                <ImageView
+                    android:id="@+id/collapseDownNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:focusable="false"
+                    android:src="@drawable/ic_down"
+                    app:layout_constraintBottom_toBottomOf="@id/collapseCurrentNightNew"
+                    app:layout_constraintStart_toEndOf="@id/collapseCurrentNightNew"
+                    app:layout_constraintTop_toTopOf="@id/collapseCurrentNightNew" />
+
+                <TextView
+                    android:id="@+id/collapseCurrentDegreeNightNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="00"
+                    android:textColor="#333333"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@id/collapseDownNew"
+                    app:layout_constraintStart_toEndOf="@+id/collapseDownNew"
+                    app:layout_constraintTop_toTopOf="@id/collapseDownNew" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="°"
+                    android:textColor="#333333"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toEndOf="@id/collapseCurrentDegreeNightNew"
+                    app:layout_constraintTop_toTopOf="@id/collapseCurrentDegreeNightNew" />
+
+                <ImageView
+                    android:id="@+id/collapseSunriseNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="79dp"
+                    android:layout_marginTop="70dp"
+                    android:src="@drawable/ic_sunrise"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/collapseCurrentDescriptionNew" />
+
+                <TextView
+                    android:id="@+id/collapseSunriseTitleNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Sunrise"
+                    android:textColor="#333333"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toEndOf="@id/collapseSunriseNew"
+                    app:layout_constraintStart_toStartOf="@id/collapseSunriseNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseSunriseNew" />
+
+                <TextView
+                    android:id="@+id/collapseSunriseTimeNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="00:00"
+                    android:textColor="#333333"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toEndOf="@id/collapseSunriseTitleNew"
+                    app:layout_constraintStart_toStartOf="@id/collapseSunriseTitleNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseSunriseTitleNew" />
+
+                <ImageView
+                    android:id="@+id/collapseWindNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="190dp"
+                    android:layout_marginTop="70dp"
+                    android:src="@drawable/ic_wind"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/collapseCurrentDescriptionNew" />
+
+                <TextView
+                    android:id="@+id/collapseWindTitleNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Wind"
+                    android:textColor="#333333"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toEndOf="@id/collapseWindNew"
+                    app:layout_constraintStart_toStartOf="@id/collapseWindNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseWindNew" />
+
+                <TextView
+                    android:id="@+id/collapseWindValueNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="00:00"
+                    android:textColor="#333333"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toEndOf="@id/collapseWindTitleNew"
+                    app:layout_constraintStart_toStartOf="@id/collapseWindTitleNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseWindTitleNew" />
+
+                <ImageView
+                    android:id="@+id/collapseSunsetNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="301dp"
+                    android:layout_marginTop="70dp"
+                    android:src="@drawable/ic_sunset"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/collapseCurrentDescriptionNew" />
+
+                <TextView
+                    android:id="@+id/collapseSunsetTitleNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Sunset"
+                    android:textColor="#333333"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toEndOf="@id/collapseSunsetNew"
+                    app:layout_constraintStart_toStartOf="@id/collapseSunsetNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseSunsetNew" />
+
+                <TextView
+                    android:id="@+id/collapseSunsetTimeNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="00:00"
+                    android:textColor="#333333"
+                    android:textSize="9sp"
+                    app:layout_constraintEnd_toEndOf="@id/collapseSunsetTitleNew"
+                    app:layout_constraintStart_toStartOf="@id/collapseSunsetTitleNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseSunsetTitleNew" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/collapseHourlyNew"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginRight="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/collapseWindValueNew" />
+
+                <TextView
+                    android:id="@+id/collapseDetailsNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Details"
+                    android:textColor="#333333"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="@+id/collapseHourlyNew"
+                    app:layout_constraintStart_toStartOf="@+id/collapseHourlyNew"
+                    app:layout_constraintTop_toBottomOf="@+id/collapseHourlyNew" />
+
+                <TextView
+                    android:id="@+id/collapseHumidityNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Humidity"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toStartOf="@+id/collapseDetailsNew"
+                    app:layout_constraintTop_toBottomOf="@+id/collapseDetailsNew" />
+
+                <TextView
+                    android:id="@+id/collapseHumidityValueNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Value"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/collapseHumidityNew"
+                    app:layout_constraintStart_toEndOf="@+id/collapseHumidityNew"
+                    app:layout_constraintTop_toTopOf="@+id/collapseHumidityNew" />
+
+                <TextView
+                    android:id="@+id/collapsePrecipitationNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Precipitation"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@+id/collapseHumidityNew"
+                    app:layout_constraintTop_toBottomOf="@+id/collapseHumidityNew" />
+
+                <TextView
+                    android:id="@+id/collapsePrecipitationValueNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Value"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/collapseHumidityValueNew"
+                    app:layout_constraintStart_toStartOf="@+id/collapseHumidityValueNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseHumidityValueNew" />
+
+                <TextView
+                    android:id="@+id/collapsePressureNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Pressure"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@+id/collapsePrecipitationNew"
+                    app:layout_constraintTop_toBottomOf="@+id/collapsePrecipitationNew" />
+
+                <TextView
+                    android:id="@+id/collapsePressureValueNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Value"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/collapsePrecipitationValueNew"
+                    app:layout_constraintStart_toStartOf="@+id/collapsePrecipitationValueNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapsePrecipitationValueNew" />
+
+                <TextView
+                    android:id="@+id/collapseCloudNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Cloud"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@+id/collapsePressureNew"
+                    app:layout_constraintTop_toBottomOf="@+id/collapsePressureNew" />
+
+                <TextView
+                    android:id="@+id/collapseCloudValueNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Value"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/collapsePressureValueNew"
+                    app:layout_constraintStart_toStartOf="@+id/collapsePressureValueNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapsePressureValueNew" />
+
+                <TextView
+                    android:id="@+id/collapseUvNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="UV Index"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@+id/collapseCloudNew"
+                    app:layout_constraintTop_toBottomOf="@+id/collapseCloudNew" />
+
+                <TextView
+                    android:id="@+id/collapseUvValueNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Value"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/collapseCloudValueNew"
+                    app:layout_constraintStart_toStartOf="@+id/collapseCloudValueNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseCloudValueNew" />
+
+                <TextView
+                    android:id="@+id/collapseVisionNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Vision"
+                    android:textColor="#666666"
+                    android:textSize="13sp"
+                    app:layout_constraintStart_toStartOf="@+id/collapseUvNew"
+                    app:layout_constraintTop_toBottomOf="@+id/collapseUvNew" />
+
+                <TextView
+                    android:id="@+id/collapseVisionValueNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:focusable="false"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Value"
+                    android:textColor="#333333"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/collapseUvValueNew"
+                    app:layout_constraintStart_toStartOf="@+id/collapseUvValueNew"
+                    app:layout_constraintTop_toBottomOf="@id/collapseUvValueNew" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/collapseButtonNew"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginLeft="305dp"
+        android:layout_marginRight="37dp"
+        android:background="@drawable/button_style_up"
+        android:shadowRadius="100"
+        app:layout_constraintBottom_toTopOf="@+id/lowerDrawNew"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lowerDrawNew" />
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motionCardNew"
+        android:layout_width="259dp"
+        android:layout_height="181dp"
+        android:elevation="4dp"
+        app:layoutDescription="@xml/fragment_new_scene"
+        app:layout_constraintBottom_toTopOf="@id/lowerDrawNew"
+        app:layout_constraintEnd_toEndOf="@id/lowerDrawNew"
+        app:layout_constraintStart_toStartOf="@id/lowerDrawNew"
+        app:layout_constraintTop_toTopOf="@id/lowerDrawNew">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDrawNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="153dp"
+            android:layout_marginRight="153dp"
+            app:layoutDescription="@xml/fragment_main_scene"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@id/lowerDrawNew"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lowerDrawNew">
+
+            <ImageView
+                android:id="@+id/currentWeatherIconLowNew"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="23dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="23dp"
+                android:layout_marginBottom="67dp" />
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginRight="53dp"
+                android:layout_marginBottom="38dp"
+                android:src="@drawable/ic_thermometer" />
+
+            <TextView
+                android:id="@+id/currentDegreeLowNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginRight="11dp"
+                android:layout_marginBottom="40dp"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="#333333"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/timeLowNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="80dp"
+                android:background="@android:color/transparent"
+                android:focusable="false"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="00:00"
+                android:textColor="#333333"
+                android:textSize="10sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

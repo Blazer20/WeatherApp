@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#099CE0</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="morning_toolbar">#A6D3ED</color>
+    <color name="day_toolbar">#079BE0</color>
+    <color name="evening_toolbar">#8C2480</color>
+    <color name="prenight_toolbar">#6F4BA8</color>
+    <color name="fullnight_toolbar">#3A265F</color>
+    <color name="premorning_toolbar">#262F6A</color>
+    <color name="white">#FFFFFF</color>
+</resources>
