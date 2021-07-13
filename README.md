@@ -8,6 +8,7 @@
 - Java
 - Retrofit
 - Room
+- Event Handler
 - MVVM
 - MotionLayout
 - REST API
